@@ -1,0 +1,24 @@
+name: dart_cv
+description: A simple command-line application.
+# version: 1.0.0
+# homepage: https://www.example.com
+
+environment:
+  sdk: '>=2.8.1 <3.0.0'
+
+dependencies:
+ path: ^1.7.0
+ yaml: any
+ font_awesome: any
+ xml: any
+
+ pdf:
+  git: 
+    url: git://github.com/szotp/dart_pdf.git
+    path: pdf
+    ref: fd8247794614b9e6a0a6ab73b3cf8026de254f61
+
+dev_dependencies:
+  pedantic: ^1.8.0
+  json_serializable: ^3.3.0
+  build_runner: ^1.0.0

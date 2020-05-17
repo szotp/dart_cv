@@ -1,0 +1,38 @@
+details:
+  first_name: John
+  last_name: Doe
+  email: email
+  github: github
+  skype: skype
+  linkedin: linkedin
+  phone: 0118 999 881 999 119 7253
+  
+
+about: |
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+education:
+  - school: School
+    location: Location
+    degree: Degree in Something
+
+    dates: 2009 - 2014
+
+industry:
+  - place: Place
+    location: Location
+    title: Position
+    dates: 2019 - present
+    cases:
+      - Case 1
+      - Case 2
+
+skills: 
+  - name: Dart
+    info: |
+      Language used to write this generator
+
+contributions:
+  - url: https://github.com/szotp/dart_cv
+    name: dart_cv
+    summary: Generator used to create this CV
