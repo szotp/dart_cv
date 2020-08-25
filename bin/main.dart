@@ -6,7 +6,7 @@ import 'package:dart_cv/social_link.dart';
 Future<void> main(List<String> arguments) async {
   await loadSvgsPath();
 
-  final name = 'example';
+  final name = 'cv';
 
   final cv = Resume.open('$name.yaml');
 

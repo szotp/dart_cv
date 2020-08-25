@@ -10,7 +10,8 @@ class Renderer {
   final styleLocation = TextStyle(color: PdfColors.grey);
   final styleSubtitle = TextStyle(fontSize: 10);
   final styleName = TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  final styleLink = TextStyle(color: PdfColors.blueAccent, fontSize: 10);
+  final styleLink =
+      TextStyle(color: PdfColor.fromInt(0xFF007ACC), fontSize: 10);
   final leftColumnWidth = 150.0;
 
   Document buildDocument(Resume resume) {
@@ -23,7 +24,9 @@ class Renderer {
     );
 
     pdf.addPage(MultiPage(
-      pageTheme: PageTheme(),
+      pageTheme: PageTheme(
+        margin: EdgeInsets.all(40),
+      ),
       build: (context) => buildResume(context, resume),
     ));
 
@@ -41,6 +44,9 @@ class Renderer {
         'Contributions',
         buildContribution,
       ),
+      Expanded(child: SizedBox()),
+      Text(resume.clause,
+          style: TextStyle(color: PdfColors.blueGrey500, fontSize: 8)),
     ];
   }
 
@@ -80,15 +86,19 @@ class Renderer {
   }
 
   Widget buildIndustry(Industry model) {
+    Widget buildCase(String e) {
+      return Padding(
+        padding: EdgeInsets.only(top: 2),
+        child: Text('- $e', style: styleSubtitle),
+      );
+    }
+
     return buildTimedSection(model.dates, [
       Text(model.title.toString(),
           style: TextStyle(fontWeight: FontWeight.bold)),
       Text(model.place),
       Text(model.location, style: styleLocation),
-      Text(
-        model.cases.reversed.map((x) => '- $x').join('\n'),
-        style: styleSubtitle,
-      ),
+      ...model.cases.reversed.map(buildCase),
     ]);
   }
 
@@ -109,10 +119,19 @@ class Renderer {
   }
 
   List<Widget> buildSection<T>(
-      Iterable<T> items, String title, Widget Function(T) builder) {
+    Iterable<T> items,
+    String title,
+    Widget Function(T) builder,
+  ) {
+    const nonSpannable = 1;
+
     return [
-      Header(text: title),
-      ...items.map(builder),
+      SizedBox(
+          child: Column(children: [
+        Header(text: title, padding: EdgeInsets.only(top: 20)),
+        ...items.take(nonSpannable).map(builder),
+      ])),
+      ...items.skip(nonSpannable).map(builder),
     ];
   }
 
@@ -140,7 +159,7 @@ Widget buildBulletColumn(List<Widget> rows) {
     child: Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        bullet,
+        BulletPoint(),
         Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -155,8 +174,6 @@ Widget buildBulletColumn(List<Widget> rows) {
 Font loadFont(String name) {
   return Font.ttf(File(name).readAsBytesSync().buffer.asByteData());
 }
-
-final bullet = BulletPoint();
 
 class BulletPoint extends StatelessWidget {
   @override

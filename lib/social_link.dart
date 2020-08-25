@@ -16,7 +16,7 @@ Future<void> loadSvgsPath() async {
 
 Widget loadIcon(String name) {
   final svgString = File(p.join(svgsPath, name)).readAsStringSync();
-  final doc = xml.parse(svgString);
+  final doc = xml.XmlDocument.parse(svgString);
 
   final svg = doc.rootElement;
   final viewBox = svg.getAttribute('viewBox');

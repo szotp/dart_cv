@@ -18,9 +18,17 @@ class Resume {
   final List<Skill> skills;
   final List<Contribution> contributions;
   final List<Industry> industry;
+  final String clause;
 
-  Resume(this.details, this.education, this.skills, this.contributions,
-      this.industry, this.about);
+  Resume(
+    this.details,
+    this.education,
+    this.skills,
+    this.contributions,
+    this.industry,
+    this.about,
+    this.clause,
+  );
   factory Resume.fromJson(Map json) => _$ResumeFromJson(json);
   Map<String, dynamic> toJson() => _$ResumeToJson(this);
 

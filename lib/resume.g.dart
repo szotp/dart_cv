@@ -24,6 +24,7 @@ Resume _$ResumeFromJson(Map json) {
         ?.map((e) => e == null ? null : Industry.fromJson(e as Map))
         ?.toList(),
     json['about'] as String,
+    json['clause'] as String,
   );
 }
 
@@ -34,6 +35,7 @@ Map<String, dynamic> _$ResumeToJson(Resume instance) => <String, dynamic>{
       'skills': instance.skills,
       'contributions': instance.contributions,
       'industry': instance.industry,
+      'clause': instance.clause,
     };
 
 ResumeDetails _$ResumeDetailsFromJson(Map json) {
