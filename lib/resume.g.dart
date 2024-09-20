@@ -39,7 +39,7 @@ ResumeDetails _$ResumeDetailsFromJson(Map json) => ResumeDetails(
       lastName: json['last_name'] as String,
       email: json['email'] as String,
       github: json['github'] as String,
-      skype: json['skype'] as String,
+      skype: json['skype'] as String?,
       linkedin: json['linkedin'] as String,
       phone: json['phone'] as String,
     );

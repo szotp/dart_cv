@@ -36,16 +36,18 @@ class Renderer {
   List<Widget> buildResume(Context context, Resume resume) {
     return [
       ...buildDetails(resume.details, resume.about),
-      ...buildSection(resume.industry.reversed, 'Industry', buildIndustry),
-      ...buildSection(resume.education, 'Education', buildEducation),
       ...buildSection(resume.skills, 'Skills', buildSkill),
+      ...buildSection(resume.education, 'Education', buildEducation),
+      ...buildSection(resume.industry.reversed, 'Industry', buildIndustry),
+
       ...buildSection(
         resume.contributions,
         'Contributions',
         buildContribution,
       ),
       Expanded(child: SizedBox()),
-      Text(resume.clause ?? '???',
+      if (resume.clause != null)
+      Text(resume.clause!,
           style: TextStyle(color: PdfColors.blueGrey500, fontSize: 8)),
     ];
   }
@@ -68,7 +70,8 @@ class Renderer {
               SocialLink.email(details.email),
               SocialLink.phone(details.phone),
               SocialLink.linkedin(details.linkedin),
-              SocialLink.skype(details.skype),
+              if (details.skype != null)
+              SocialLink.skype(details.skype!),
             ]),
           ),
           Expanded(child: Text(about)),
@@ -98,7 +101,7 @@ class Renderer {
           style: TextStyle(fontWeight: FontWeight.bold)),
       Text(model.place),
       Text(model.location, style: styleLocation),
-      ...model.cases.reversed.map(buildCase),
+      ...model.cases.map(buildCase),
     ]);
   }
 

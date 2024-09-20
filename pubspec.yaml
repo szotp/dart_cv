@@ -11,7 +11,7 @@ dependencies:
   yaml: any
   xml: any
   pdf: any
-  json_annotation: any
+  json_annotation: ^4.9.0
 
 dev_dependencies:
   pedantic: ^1.8.0

@@ -45,7 +45,7 @@ class ResumeDetails {
   final String lastName;
   final String email;
   final String github;
-  final String skype;
+  final String? skype;
   final String linkedin;
   final String phone;
 
@@ -54,7 +54,7 @@ class ResumeDetails {
     required this.lastName,
     required this.email,
     required this.github,
-    required this.skype,
+    this.skype,
     required this.linkedin,
     required this.phone,
   });

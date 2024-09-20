@@ -1,0 +1,147 @@
+clause: I agree to the processing of personal data provided in this document for realizing the recruitment process pursuant to the Personal Data Protection Act of 10 May 2018 (Journal of Laws 2018, item 1000) and in agreement with Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation)
+
+details:
+  first_name: Paweł
+  last_name: Szot
+  email: qwertyszot@gmail.com
+  github: szotp
+  linkedin: pawel-szot
+  phone: +48 788 452 968
+  
+
+about: |
+  Experienced mobile app developer with strong background in native iOS and Flutter. Interested in learning new tech and solving hard problems.
+  
+  Preferred location: Rzeszów or Remote
+
+education:
+  - school: Rzeszów University of Technology
+    location: Rzeszów
+    degree: Engineer in Computer Engineering
+
+    dates: 2009 - 2014
+
+industry:
+  - place: Concise Software
+    location: Rzeszów
+    title: iOS Developer
+    dates: 11.2013 - 11.2015
+    cases:
+      - First job, learning iOS development from zero.
+      - Music and radio app. Included Bluetooth and USB capabilities for connecting with Car infotainment systems of various vendors.
+      - Food delivery app. Complex ordering menu with specials and variations. Inherited code with giant technical debt - refactored it into a nice app.
+      - Content presentation app for a German tech website. Offline mode, RSS parsing, HTML parsing, comments, videos.
+
+  - place: PGS Software
+    location: Rzeszów
+    title: iOS Developer
+    dates: 12.2015 - 04.2021
+    cases:
+      - Companion app for fair events. Local database of exhibitors, maps, news, audio files. Multiple clones from the same source code.
+      - Proof of concept app for car owners. Displays car usage, kilometers driven, average speed, and other car related statistics.
+      - File management app with offline storage and sync. Complex logic with a lot of tests to keep it in check.
+      - App for document validation written in Xamarin.Forms.
+      - Banking app. Working in a large team with legacy code, complexity, and UI testing. - Workout app for runners. GPS, pedometer, real-time connection with friends.
+      - "App for apartment residents: displaying news, local advertisements, maps, points of interest, online shopping and ordering."
+
+  - place: PGS Software
+    location: Rzeszów
+    title: Flutter Developer
+    dates: 09.2018 - 04.2021
+    cases:
+      - Discovered Flutter and learned it in between projects.
+      - An app for teachers to manage their lessons. Teacher can schedule lessons, pick apps that the users can open on their devices, monitor and check for any problems.
+      - IoT app for climate & light management in an office. Detects the room user is currently nearby, giving option to control air conditioning, light brightness, and more.
+      - Chat module for existing native app. Offline storage using moor, with advanced, optimized filtering & search. Realtime communication with push notifications.
+      - Proof of concept for smart home management of electricity supply and production (solar panels, wind energy). Charts, QR scanner, realtime data display.
+      - App for procurement in mid sized enterprises. Simple UI, complex backend interactions.
+
+  - place: Beekeeper
+    location: Kraków / Remote
+    title: Senior iOS Developer
+    dates: 03.2021 - 06.2022
+    cases:
+      - First experience in a product company
+      - Working in a bigger team on XMPP-based chat module
+      - Developing long term strategy to deal with existing tech debt
+      - Maintaining complex CI with white labelling and a very customized QA process - Supporting team members with iOS knowledge
+      - Code review
+      - Learning how to work at a product company
+      - Interviewing candidates
+
+  - place: Livechat / Text
+    location: Wrocław / Remote
+    title: Flutter engineer
+    dates: 07.2022 - 06.2024
+    cases:
+      - Essentially independent, full stack developer working in Mobile R & D team. We would create flutter apps backed by firebase cloud functions and firestore.
+      - "First project: App for reviewing chats. Members of customer support team would review each other interaction with customers to ensure maximum quality."
+      - App that used gesture detection capabilities to provide a touch-less interaction via camera and video. It could be set up behind a window in a store, and passing people would be able to do something through the window without touching the device that runs the app.
+      - Dataset labeling app - ML team would upload large batch of chats that need labeling. Individual users would, through the mobile app, go through the chats and perform task that ML team asked them to do. At the end, ML team would download their work and use in AI training.
+      - AlphaBot - OpenAI powered configurable bot. We provided a website through which customers would talk to with your bot. Your bot would use knowledge you provided to answer questions. If bot didn't know the answer, it would send you a push notification with inquiry. Once you answered, the bot would continue conversation with the customer and save provided knowledge for future.
+
+skills: 
+  - name: Native iOS development (UIKit)
+    info: |
+      more than 7 years of experience in writing native apps, with and without storyboards
+      Familiar with: CoreData, Realm, RxSwift, SwiftLint, SwiftFormat, SwiftGen, RxSwift, Carthage, CocoaPods, SPM, and more...
+
+  - name: Flutter
+    info: |
+      I've been writing Flutter apps since September 2018, I have finished multiple projects - each with its own difficulties and challenges. I also use Flutter at home for personal, hobby stuff.
+      Preferred toolkit: provider, drift or firestore, open_api_generator
+
+  - name: Full stack
+    info: Complete development of frontend (flutter or native iOS) and backend (firebase cloud functions and firestore).
+
+  - name: Software craftsmanship
+    info: Writing maintainable code, applying scout's rule, discussing PRs, proposing improvements, separating layers, keeping things simple
+
+  - name: Problem solving
+    info: Looking for solutions, checking CI failures, reading Flutter's source code, fixing code generation, tracking crashes, hacking xcodeproj.
+
+  - name: Refactoring legacy code
+    info: Rewriting from UIKit to Flutter, untangling spaghetti code, adding tests, introducing MVVM
+
+  - name: Unit & integration testing
+    info: stubbing requests, monitoring coverage, mocking singletons, snapshot testing
+
+  - name: CI (gitlab, bitrise)
+    info: Maintaining CI scripts for building mobile apps
+
+  - name: Communication
+    info: Clarifying requirements, working with designers, explaining edge cases, reviewing code, updating JIRA, reporting problems, explaining code signing & provisioning profiles.
+
+  - name: Prompt engineering
+    info: Working with OpenAPI api to create useful bots that are integrated with knowledge sources and external tools
+
+  - name: Command line tools
+    info: Writing utils in Dart or Swift to help with app development
+
+  - name: Open source
+    info: reporting issues, discussing workarounds, forking libraries, publishing pods, sending PRs
+
+  - name: "Tools: VSCode, git, JIRA, Gitlab, Github, Bitrise, Xcode, GitKraken, Proxyman, Postman, OpenAPI, OpenAI, and many more..."
+
+  - name: "Programming languages: Dart, Swift, TypeScript, Objective-C, C#"
+
+  - name: "Human languages: Polish (native), English (pretty good)"
+
+  - name: "Programming hobbies: compilers, cellular automata, fractals, game development, podcasts, esp8266"
+
+contributions:
+  - url: https://github.com/szotp/dart_cv
+    name: dart_cv
+    summary: Generator used to create this CV
+  - url: https://github.com/apple/swift/pulls?q=is%3Apr+author%3Aszotp+is%3Amerged
+    name: Swift Pull Requests
+    summary: My merged PRs to the Swift compiler
+  - url: https://github.com/szotp/localization_sheets
+    name: localization_sheets
+    summary: A command line tool to import i18n strings from google sheet to .arb or .strings
+  - url: https://stackoverflow.com/questions/53294551/showdialog-from-root-widget
+    name: "StackOverflow: Show dialog from root widget"
+    summary: My most popular answer on stackoverflow ;)
+  - url: https://github.com/szotp/Executor
+    name: Executor
+    summary: Finder extension that automatically displays self written scripts in finder's menu.
