@@ -18,7 +18,7 @@ class Resume {
   final List<Skill> skills;
   final List<Contribution> contributions;
   final List<Industry> industry;
-  final String clause;
+  final String? clause;
 
   Resume(
     this.details,
@@ -50,13 +50,13 @@ class ResumeDetails {
   final String phone;
 
   ResumeDetails({
-    this.firstName,
-    this.lastName,
-    this.email,
-    this.github,
-    this.skype,
-    this.linkedin,
-    this.phone,
+    required this.firstName,
+    required this.lastName,
+    required this.email,
+    required this.github,
+    required this.skype,
+    required this.linkedin,
+    required this.phone,
   });
 
   factory ResumeDetails.fromJson(Map json) => _$ResumeDetailsFromJson(json);
@@ -92,7 +92,7 @@ class Industry {
 @yaml
 class Skill {
   final String name;
-  final String info;
+  final String? info;
   Skill(this.name, this.info);
 
   factory Skill.fromJson(Map json) => _$SkillFromJson(json);

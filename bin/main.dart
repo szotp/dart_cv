@@ -13,5 +13,5 @@ Future<void> main(List<String> arguments) async {
   final renderer = Renderer();
   final pdf = renderer.buildDocument(cv);
 
-  File('$name.pdf').writeAsBytesSync(pdf.save());
+  File('$name.pdf').writeAsBytesSync(await pdf.save());
 }

@@ -6,12 +6,12 @@ import 'package:pdf/widgets.dart';
 import 'package:path/path.dart' as p;
 import 'package:xml/xml.dart' as xml;
 
-String svgsPath;
+String svgsPath = '';
 
 Future<void> loadSvgsPath() async {
   final brandsUri =
-      await Isolate.resolvePackageUri(Uri.parse('package:font_awesome/svgs'));
-  svgsPath = brandsUri.toFilePath();
+      await Isolate.resolvePackageUri(Uri.parse('package:dart_cv/assets/icons'));
+  svgsPath = brandsUri!.toFilePath();
 }
 
 Widget loadIcon(String name) {
@@ -20,10 +20,10 @@ Widget loadIcon(String name) {
 
   final svg = doc.rootElement;
   final viewBox = svg.getAttribute('viewBox');
-  final viewBoxValues = viewBox.split(' ').map((x) => double.parse(x)).toList();
+  final viewBoxValues = viewBox!.split(' ').map((x) => double.parse(x)).toList();
 
   final path = doc.findAllElements('path').first;
-  var d = path.getAttribute('d');
+  var d = path.getAttribute('d')!;
 
   return SizedBox(
     width: 10,
@@ -45,33 +45,29 @@ class SocialLink extends StatelessWidget {
   SocialLink(this.social, this.value, this.destination);
 
   factory SocialLink.skype(String value) {
-    return SocialLink('brands/skype.svg', value, 'skype:$value?chat');
+    return SocialLink('skype.svg', value, 'skype:$value?chat');
   }
 
   factory SocialLink.github(String value) {
-    return SocialLink('brands/github.svg', value, 'https://github.com/$value');
+    return SocialLink('github.svg', value, 'https://github.com/$value');
   }
 
   factory SocialLink.linkedin(String value) {
     return SocialLink(
-        'brands/linkedin.svg', value, 'https://www.linkedin.com/in/$value');
+        'linkedin.svg', value, 'https://www.linkedin.com/in/$value');
   }
 
   factory SocialLink.email(String value) {
-    return SocialLink('solid/envelope.svg', value, 'mailto:$value');
+    return SocialLink('envelope.svg', value, 'mailto:$value');
   }
 
   factory SocialLink.phone(String value) {
     final link = value.replaceAll(' ', '');
-    return SocialLink('solid/phone.svg', value, 'tel:$link');
+    return SocialLink('phone.svg', value, 'tel:$link');
   }
 
   @override
   Widget build(Context context) {
-    if (value == null) {
-      return SizedBox.shrink();
-    }
-
     return Row(
       children: [
         loadIcon(social),

@@ -4,16 +4,16 @@ description: A simple command-line application.
 # homepage: https://www.example.com
 
 environment:
-  sdk: '>=2.8.1 <3.0.0'
+  sdk: ^3.4.3
 
 dependencies:
- path: ^1.7.0
- yaml: any
- font_awesome: any
- xml: any
- pdf: any
+  path: any
+  yaml: any
+  xml: any
+  pdf: any
+  json_annotation: any
 
 dev_dependencies:
   pedantic: ^1.8.0
-  json_serializable: ^3.4.0
-  build_runner: ^1.10.0
+  json_serializable: any
+  build_runner: any

@@ -45,7 +45,7 @@ class Renderer {
         buildContribution,
       ),
       Expanded(child: SizedBox()),
-      Text(resume.clause,
+      Text(resume.clause ?? '???',
           style: TextStyle(color: PdfColors.blueGrey500, fontSize: 8)),
     ];
   }
@@ -114,7 +114,7 @@ class Renderer {
   Widget buildSkill(Skill model) {
     return buildBulletColumn([
       Text(model.name),
-      if (model.info != null) Text(model.info, style: styleSubtitle),
+      if (model.info != null) Text(model.info!, style: styleSubtitle),
     ]);
   }
 
