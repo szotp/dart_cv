@@ -1,3 +1,5 @@
+# dart run bin/main.dart szotp.yaml 
+
 clause: I agree to the processing of personal data provided in this document for realizing the recruitment process pursuant to the Personal Data Protection Act of 10 May 2018 (Journal of Laws 2018, item 1000) and in agreement with Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation)
 
 details:
@@ -79,6 +81,18 @@ industry:
       - App that used gesture detection capabilities to provide a touch-less interaction via camera and video. It could be set up behind a window in a store, and passing people would be able to do something through the window without touching the device that runs the app.
       - Dataset labeling app - ML team would upload large batch of chats that need labeling. Individual users would, through the mobile app, go through the chats and perform task that ML team asked them to do. At the end, ML team would download their work and use in AI training.
       - AlphaBot - OpenAI powered configurable bot. We provided a website through which customers would talk to with your bot. Your bot would use knowledge you provided to answer questions. If bot didn't know the answer, it would send you a push notification with inquiry. Once you answered, the bot would continue conversation with the customer and save provided knowledge for future.
+
+  - place: OLX
+    location: Kraków / Remote
+    title: Mobile engineer
+    dates: 12.2024 - present
+    cases:
+      - Working as a part of large team of mobile engineers
+      - Navigated large, complex codebase full of legacy code
+      - Submitted improvements to the project, such as reducing compilation time, removing deprecated code, and more.
+      - Introduced accessibility based testing approach
+      - Led an initiative to start refactoring one of the most critical parts of the app that did not have anytests
+      - Added new features on top of the refactored code.
 
 skills: 
   - name: Native iOS development (UIKit)
